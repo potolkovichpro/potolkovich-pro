@@ -4,14 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Потолкович-Про | Натяжные потолки в Вологде</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+
+<link rel="icon" type="image/png" href="favicon.png">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
@@ -20,57 +26,148 @@ color:#333;
 line-height:1.6;
 }
 
-header{
-background:linear-gradient(135deg,#0f62fe,#00a3ff);
+/* Верхнее меню */
+
+.topbar{
+position:absolute;
+top:20px;
+left:0;
+right:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 50px;
+z-index:10;
+}
+
+.logo{
+height:80px;
+}
+
+.contacts{
+display:flex;
+gap:25px;
+align-items:center;
+font-size:18px;
+font-weight:bold;
+}
+
+.contacts a{
 color:white;
-padding:80px 20px;
+text-decoration:none;
+}
+
+/* Главный экран */
+
+header{
+position:relative;
+height:768px;
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("hero.png");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+display:flex;
+justify-content:center;
+align-items:center;
 text-align:center;
+color:white;
+padding:20px;
 }
 
-header h1{
-font-size:48px;
+.hero-content{
+max-width:900px;
+}
+
+.hero-content h1{
+font-size:68px;
 margin-bottom:20px;
+text-shadow:0 4px 20px rgba(0,0,0,.5);
 }
 
-header p{
-font-size:22px;
-margin-bottom:30px;
+.hero-content p{
+font-size:26px;
+margin-bottom:40px;
+text-shadow:0 4px 20px rgba(0,0,0,.5);
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
 .btn{
 display:inline-block;
-background:white;
-color:#0f62fe;
-padding:15px 30px;
-border-radius:30px;
+padding:18px 35px;
+border-radius:50px;
 text-decoration:none;
 font-weight:bold;
+font-size:18px;
+transition:.3s;
 }
 
+.btn-primary{
+background:#0f62fe;
+color:white;
+}
+
+.btn-primary:hover{
+background:#004fd6;
+}
+
+.btn-secondary{
+background:white;
+color:#0f62fe;
+}
+
+.btn-secondary:hover{
+transform:translateY(-3px);
+}
+
+/* Блоки */
+
 section{
-padding:60px 20px;
+padding:80px 20px;
 max-width:1200px;
 margin:auto;
 }
 
 h2{
 text-align:center;
-margin-bottom:40px;
-font-size:36px;
+margin-bottom:50px;
+font-size:42px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
 }
 
 .card{
 background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 3px 10px rgba(0,0,0,.1);
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
 }
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#0f62fe;
+}
+
+/* Галерея */
 
 .gallery{
 display:grid;
@@ -80,37 +177,114 @@ gap:20px;
 
 .gallery img{
 width:100%;
-border-radius:15px;
+height:250px;
+object-fit:cover;
+border-radius:20px;
 }
 
+/* Контакты */
+
 .contact{
-background:#0f62fe;
+background:linear-gradient(135deg,#0f62fe,#00a3ff);
 color:white;
 text-align:center;
-padding:60px 20px;
+border-radius:30px;
+margin-top:50px;
 }
+
+.contact h2{
+margin-bottom:20px;
+}
+
+.phone{
+font-size:32px;
+font-weight:bold;
+margin:20px 0;
+}
+
+/* Футер */
 
 footer{
 background:#111;
 color:white;
 text-align:center;
+padding:25px;
+margin-top:80px;
+}
+
+/* Мобильная версия */
+
+@media(max-width:768px){
+
+.topbar{
+flex-direction:column;
+gap:15px;
 padding:20px;
 }
+
+.logo{
+height:60px;
+}
+
+.hero-content h1{
+font-size:40px;
+}
+
+.hero-content p{
+font-size:20px;
+}
+
+.phone{
+font-size:24px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Натяжные потолки в Вологде</h1>
-<p>Потолкович-Про • Бесплатный замер • Гарантия 15 лет</p>
 
-<a class="btn" href="tel:+79646713082">
-Позвонить
+<div class="topbar">
+
+<img src="favicon.png" class="logo" alt="Потолкович-Про">
+
+<div class="contacts">
+<a href="tel:+79646713082">📞 +7 (964) 671-30-82</a>
+<a href="#">Telegram</a>
+<a href="#">Instagram</a>
+</div>
+
+</div>
+
+<div class="hero-content">
+
+<h1>Натяжные потолки в Вологде</h1>
+
+<p>
+Потолкович-Про • Бесплатный замер • Гарантия 15 лет
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-primary" href="tel:+79646713082">
+Бесплатный замер
 </a>
+
+<a class="btn btn-secondary" href="#contact">
+Рассчитать стоимость
+</a>
+
+</div>
+
+</div>
+
 </header>
 
 <section>
+
 <h2>Наши услуги</h2>
 
 <div class="cards">
@@ -136,59 +310,65 @@ padding:20px;
 </div>
 
 </div>
+
 </section>
 
 <section>
+
 <h2>Почему выбирают нас</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>15 лет гарантии</h3>
+<h3>🛡 Гарантия 15 лет</h3>
 </div>
 
 <div class="card">
-<h3>Бесплатный замер</h3>
+<h3>📏 Бесплатный замер</h3>
 </div>
 
 <div class="card">
-<h3>Монтаж за 1 день</h3>
+<h3>⚡ Монтаж за 1 день</h3>
 </div>
 
 <div class="card">
-<h3>Чистая установка</h3>
+<h3>✨ Чистая установка</h3>
 </div>
 
 </div>
+
 </section>
 
 <section>
+
 <h2>Наши работы</h2>
 
 <div class="gallery">
 
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800" alt="">
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800" alt="">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800" alt="">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="">
+<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200" alt="">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="">
 
 </div>
+
 </section>
 
-<section class="contact">
+<section id="contact" class="contact">
+
 <h2>Получить бесплатный замер</h2>
 
-<p style="font-size:24px;margin-top:20px;">
+<div class="phone">
 📞 +7 (964) 671-30-82
-</p>
+</div>
 
-<p style="margin-top:20px;">
-Работаем по Вологде и области
+<p>
+Работаем по Вологде и Вологодской области
 </p>
 
 </section>
 
 <footer>
-© Потолкович-Про
+© 2026 Потолкович-Про | Натяжные потолки в Вологде
 </footer>
 
 </body>
