@@ -365,7 +365,7 @@ Instagram
 Бесплатный замер
 </a>
 
-<a class="btn btn-secondary" href="#contact">
+<a class="btn btn-secondary" href="#calculator">
 Рассчитать стоимость
 </a>
 
@@ -705,38 +705,28 @@ Instagram
 
 </footer>
 
-  <script>
+<script>
+function calculatePrice() {
 
-function calculatePrice(){
+const area = Number(document.getElementById("area").value);
+const ceiling = Number(document.getElementById("ceilingType").value);
+const lighting = Number(document.getElementById("lighting").value);
 
-let area =
-parseFloat(document.getElementById('area').value);
-
-if(!area || area <= 0){
-
-document.getElementById('result').innerHTML =
-'Введите площадь помещения';
-
+if (area <= 0 || isNaN(area)) {
+document.getElementById("result").innerHTML =
+"Введите площадь помещения";
 return;
 }
 
-let ceiling =
-parseInt(document.getElementById('ceilingType').value);
+const total = area * ceiling + lighting;
 
-let lighting =
-parseInt(document.getElementById('lighting').value);
-
-let total =
-(area * ceiling) + lighting;
-
-document.getElementById('result').innerHTML =
-'Примерная стоимость: ' +
-total.toLocaleString('ru-RU') +
-' ₽';
+document.getElementById("result").innerHTML =
+"Примерная стоимость: <br><strong>" +
+total.toLocaleString("ru-RU") +
+" ₽</strong>";
 
 }
-
 </script>
-
+  
 </body>
 </html>
