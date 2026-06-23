@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Потолкович-Про | Натяжные потолки в Вологде</title>
+
+<meta name="description" content="Натяжные потолки в Вологде. Бесплатный замер. Гарантия 15 лет. Монтаж за 1 день.">
 
 <link rel="icon" type="image/png" href="favicon.png">
 
@@ -22,86 +25,94 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f5f5f5;
+background:#f5f7fb;
 color:#333;
 line-height:1.6;
+overflow-x:hidden;
 }
 
-/* Шапка */
-
-.topbar{
-position:absolute;
-top:20px;
-left:0;
-right:0;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:0 50px;
-z-index:10;
-}
-
-.logo{
-height:55px;
-}
-
-.contacts{
-display:flex;
-gap:25px;
-align-items:center;
-font-size:18px;
-font-weight:bold;
-}
-
-.contacts a{
-color:white;
-text-decoration:none;
-transition:.3s;
-}
-
-.contacts a:hover{
-opacity:.8;
-}
-
-/* Главный экран */
+/* =========================
+ШАПКА
+========================= */
 
 header{
 position:relative;
-height:768px;
+height:100vh;
+min-height:750px;
 
 background:
-linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
 url("hero.png");
 
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 
+color:white;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+}
+
+.topbar{
+
+position:absolute;
+top:20px;
+left:0;
+right:0;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:0 50px;
+z-index:100;
+}
+
+.logo{
+height:120px;
+width:auto;
+}
+
+.contacts{
+display:flex;
+gap:25px;
+align-items:center;
+}
+
+.contacts a{
 color:white;
-padding:20px;
+text-decoration:none;
+font-weight:bold;
+font-size:17px;
+
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.contacts img{
+width:22px;
+height:22px;
 }
 
 .hero-content{
-max-width:900px;
-position:relative;
-z-index:5;
+max-width:1000px;
+padding:20px;
 }
 
 .hero-content h1{
 font-size:72px;
 font-weight:800;
 margin-bottom:20px;
-text-shadow:0 4px 30px rgba(0,0,0,.8);
+text-shadow:0 5px 25px rgba(0,0,0,.5);
 }
 
 .hero-content p{
 font-size:28px;
 margin-bottom:40px;
-text-shadow:0 4px 20px rgba(0,0,0,.8);
+text-shadow:0 5px 25px rgba(0,0,0,.5);
 }
 
 .buttons{
@@ -113,11 +124,11 @@ flex-wrap:wrap;
 
 .btn{
 display:inline-block;
-padding:18px 35px;
+padding:18px 36px;
 border-radius:50px;
-text-decoration:none;
-font-weight:bold;
 font-size:18px;
+font-weight:bold;
+text-decoration:none;
 transition:.3s;
 }
 
@@ -128,7 +139,7 @@ color:white;
 
 .btn-primary:hover{
 background:#004fd6;
-transform:translateY(-2px);
+transform:translateY(-3px);
 }
 
 .btn-secondary{
@@ -137,26 +148,51 @@ color:#0f62fe;
 }
 
 .btn-secondary:hover{
-transform:translateY(-2px);
+transform:translateY(-3px);
 }
 
-/* Блоки */
+.hero-features{
+margin-top:45px;
+
+display:flex;
+justify-content:center;
+gap:35px;
+flex-wrap:wrap;
+
+font-size:18px;
+font-weight:bold;
+}
+
+.hero-features span{
+background:rgba(255,255,255,.12);
+padding:10px 18px;
+border-radius:30px;
+backdrop-filter:blur(5px);
+}
+
+/* =========================
+ОБЩИЕ БЛОКИ
+========================= */
 
 section{
-padding:80px 20px;
+padding:90px 20px;
+}
+
+.container{
 max-width:1200px;
 margin:auto;
 }
 
-h2{
+.section-title{
 text-align:center;
-margin-bottom:50px;
 font-size:42px;
+margin-bottom:50px;
+color:#111;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
@@ -173,57 +209,13 @@ transform:translateY(-5px);
 }
 
 .card h3{
-margin-bottom:15px;
 color:#0f62fe;
+margin-bottom:15px;
 }
 
-/* Галерея */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:20px;
-}
-
-.gallery img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:20px;
-}
-
-/* Контакты */
-
-.contact{
-background:linear-gradient(135deg,#0f62fe,#00a3ff);
-color:white;
-text-align:center;
-border-radius:30px;
-margin-top:50px;
-padding:60px 20px;
-}
-
-.contact h2{
-margin-bottom:20px;
-}
-
-.phone{
-font-size:32px;
-font-weight:bold;
-margin:20px 0;
-}
-
-/* Футер */
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:80px;
-}
-
-/* Мобильная версия */
+/* =========================
+МОБИЛЬНАЯ ВЕРСИЯ
+========================= */
 
 @media(max-width:768px){
 
@@ -234,28 +226,29 @@ padding:20px;
 }
 
 .logo{
-height:45px;
+height:80px;
 }
 
 .contacts{
-font-size:15px;
-gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+font-size:14px;
 }
 
 .hero-content h1{
-font-size:42px;
+font-size:40px;
 }
 
 .hero-content p{
 font-size:20px;
 }
 
-.phone{
-font-size:24px;
+.hero-features{
+font-size:14px;
 }
 
 header{
-height:650px;
+min-height:700px;
 }
 
 }
@@ -269,7 +262,7 @@ height:650px;
 
 <div class="topbar">
 
-<img src="favicon.png" class="logo" alt="Потолкович-Про">
+<img src="logo.png" class="logo" alt="Потолкович-Про">
 
 <div class="contacts">
 
@@ -278,23 +271,26 @@ height:650px;
 </a>
 
 <a href="https://t.me/potolkovich_pro" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="22">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
 Telegram
 </a>
 
-<a href="https://instagram.com/" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="22">
+<a href="#" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
 Instagram
 </a>
 
 </div>
 
+</div>
+
 <div class="hero-content">
 
-<h1>Потолкович-Про</h1>
+<h1>
+Натяжные потолки в Вологде
+</h1>
 
 <p>
-Качественные натяжные потолки в Вологде и области<br>
 Бесплатный замер • Гарантия 15 лет • Монтаж за 1 день
 </p>
 
@@ -310,96 +306,349 @@ Instagram
 
 </div>
 
+<div class="hero-features">
+
+<span>✓ Бесплатный выезд</span>
+
+<span>✓ Работа без пыли</span>
+
+<span>✓ Более 1000 объектов</span>
+
+</div>
+
 </div>
 
 </header>
+<!-- НАШИ УСЛУГИ -->
 
 <section>
 
-<h2>Наши услуги</h2>
+<div class="container">
+
+<h2 class="section-title">
+Наши услуги
+</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>Матовые потолки</h3>
-<p>Современный и практичный вариант для любой комнаты.</p>
+<p>Классическое решение для квартиры, дома или офиса.</p>
 </div>
 
 <div class="card">
 <h3>Глянцевые потолки</h3>
-<p>Визуально увеличивают пространство.</p>
+<p>Визуально увеличивают пространство и отражают свет.</p>
 </div>
 
 <div class="card">
-<h3>Световые линии</h3>
-<p>Стильное современное освещение.</p>
+<h3>Тканевые потолки</h3>
+<p>Премиальное решение без нагрева помещения.</p>
 </div>
 
 <div class="card">
-<h3>Теневой профиль</h3>
-<p>Премиальный внешний вид потолка.</p>
+<h3>Двухуровневые потолки</h3>
+<p>Современный дизайн и зонирование пространства.</p>
+</div>
+
+<div class="card">
+<h3>Сатиновые потолки</h3>
+<p>Элегантная фактура с мягким отражением света.</p>
+</div>
+
+<div class="card">
+<h3>Перфорированные потолки</h3>
+<p>Необычные дизайнерские решения для интерьера.</p>
+</div>
+
+<div class="card">
+<h3>Полупрозрачные потолки</h3>
+<p>Эффект светящегося потолка по всей площади.</p>
+</div>
+
+<div class="card">
+<h3>Текстурные потолки</h3>
+<p>Имитация натуральных материалов и эксклюзивных покрытий.</p>
+</div>
+
+<div class="card">
+<h3>Комбинированные потолки</h3>
+<p>Сочетание нескольких фактур и цветов.</p>
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<section>
+<!-- ПРЕИМУЩЕСТВА -->
 
-<h2>Почему выбирают нас</h2>
+<section style="background:#f0f4ff;">
+
+<div class="container">
+
+<h2 class="section-title">
+Почему выбирают нас
+</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>🛡 Гарантия 15 лет</h3>
+<p>Используем проверенные материалы и комплектующие.</p>
 </div>
 
 <div class="card">
 <h3>📏 Бесплатный замер</h3>
+<p>Выезжаем по Вологде и области без оплаты.</p>
 </div>
 
 <div class="card">
 <h3>⚡ Монтаж за 1 день</h3>
+<p>Большинство объектов сдаём в день установки.</p>
 </div>
 
 <div class="card">
-<h3>✨ Чистая установка</h3>
+<h3>✨ Без пыли и мусора</h3>
+<p>Работаем профессиональным инструментом с пылеудалением.</p>
+</div>
+
 </div>
 
 </div>
 
 </section>
 
+<!-- КАК МЫ РАБОТАЕМ -->
+
 <section>
 
-<h2>Наши работы</h2>
+<div class="container">
+
+<h2 class="section-title">
+Как мы работаем
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>1. Бесплатный замер</h3>
+<p>Приезжаем на объект, делаем замеры и консультацию.</p>
+</div>
+
+<div class="card">
+<h3>2. Закупка материала</h3>
+<p>Подготавливаем полотно и комплектующие под ваш проект.</p>
+</div>
+
+<div class="card">
+<h3>3. Монтаж 1-2 дня</h3>
+<p>Быстрая и аккуратная установка с гарантией качества.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ГАЛЕРЕЯ -->
+
+<section style="background:#f8f9fb;">
+
+<div class="container">
+
+<h2 class="section-title">
+Наши работы
+</h2>
 
 <div class="gallery">
 
 <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="">
+
 <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200" alt="">
+
 <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="">
+
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="">
+
+<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200" alt="">
+
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="">
+
+</div>
+
+</div>
+
+</section>
+<!-- FAQ -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Вопросы и ответы
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Как выбрать фактуру натяжного потолка?</h3>
+<p>
+Матовые потолки выглядят как классический окрашенный потолок.
+Сатиновые имеют мягкий благородный блеск.
+Глянцевые отражают свет и визуально увеличивают помещение.
+</p>
+</div>
+
+<div class="card">
+<h3>Когда устанавливать потолок?</h3>
+<p>
+Мы рекомендуем выполнять монтаж после поклейки обоев и завершения отделочных работ,
+но до установки мебели.
+</p>
+</div>
+
+<div class="card">
+<h3>Какой профиль используется?</h3>
+<p>
+Мы используем надежный алюминиевый профиль и гарпунную систему монтажа,
+которая обеспечивает долговечность и возможность демонтажа без повреждения полотна.
+</p>
+</div>
+
+<div class="card">
+<h3>Что делать при затоплении?</h3>
+<p>
+Натяжной потолок способен удерживать большое количество воды.
+Наши специалисты аккуратно сольют воду и восстановят первоначальный вид потолка.
+</p>
+</div>
+
+<div class="card">
+<h3>Нужно ли готовить помещение?</h3>
+<p>
+Обычно достаточно обеспечить доступ к стенам по периметру помещения.
+Мы используем инструмент с пылеудалением и работаем максимально аккуратно.
+</p>
+</div>
+
+<div class="card">
+<h3>Можно ли устанавливать на гипсокартон?</h3>
+<p>
+Да. Наши монтажники имеют большой опыт установки натяжных потолков на стены из гипсокартона.
+</p>
+</div>
+
+<div class="card">
+<h3>Сколько времени занимает монтаж?</h3>
+<p>
+Комната площадью около 20 м² обычно устанавливается за 2–3 часа.
+Квартира без сложных конструкций — за один день.
+</p>
+</div>
+
+<div class="card">
+<h3>На сколько опускается потолок?</h3>
+<p>
+Минимальное опускание составляет около 3 см.
+При установке встроенных светильников обычно требуется 6–7 см.
+</p>
+</div>
+
+<div class="card">
+<h3>Есть ли запах после монтажа?</h3>
+<p>
+Качественные полотна имеют минимальный запах, который полностью исчезает через несколько часов.
+</p>
+</div>
+
+<div class="card">
+<h3>Можно ли устанавливать в неотапливаемом помещении?</h3>
+<p>
+Да. Для холодных помещений рекомендуем тканевые потолки, которые не боятся низких температур.
+</p>
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<section id="contact" class="contact">
+<!-- КОНТАКТЫ -->
 
-<h2>Получить бесплатный замер</h2>
+<section id="contact">
+
+<div class="container">
+
+<div class="contact">
+
+<h2>
+Получить бесплатный замер
+</h2>
 
 <div class="phone">
 📞 +7 (964) 671-30-82
 </div>
 
-<p>
-Работаем ежедневно • Вологда и Вологодская область
+<p style="font-size:20px;margin-top:20px;">
+Работаем ежедневно по Вологде и Вологодской области
 </p>
+
+<div style="margin-top:30px;">
+
+<a
+href="tel:+79646713082"
+class="btn btn-secondary"
+style="margin:10px;">
+Позвонить
+</a>
+
+<a
+href="https://t.me/potolkovich_pro"
+target="_blank"
+class="btn btn-secondary"
+style="margin:10px;">
+Написать в Telegram
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 <footer>
-© 2026 Потолкович-Про | Натяжные потолки в Вологде
+
+<div style="max-width:1200px;margin:auto;">
+
+<h3 style="margin-bottom:15px;">
+Потолкович-Про
+</h3>
+
+<p>
+Натяжные потолки в Вологде и Вологодской области
+</p>
+
+<p style="margin-top:10px;">
+Телефон: +7 (964) 671-30-82
+</p>
+
+<p style="margin-top:10px;">
+Гарантия 15 лет • Бесплатный замер • Монтаж за 1 день
+</p>
+
+<p style="margin-top:25px;color:#999;">
+© 2026 Потолкович-Про. Все права защищены.
+</p>
+
+</div>
+
 </footer>
 
 </body>
