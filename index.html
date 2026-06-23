@@ -705,5 +705,38 @@ Instagram
 
 </footer>
 
+  <script>
+
+function calculatePrice(){
+
+let area =
+parseFloat(document.getElementById('area').value);
+
+if(!area || area <= 0){
+
+document.getElementById('result').innerHTML =
+'Введите площадь помещения';
+
+return;
+}
+
+let ceiling =
+parseInt(document.getElementById('ceilingType').value);
+
+let lighting =
+parseInt(document.getElementById('lighting').value);
+
+let total =
+(area * ceiling) + lighting;
+
+document.getElementById('result').innerHTML =
+'Примерная стоимость: ' +
+total.toLocaleString('ru-RU') +
+' ₽';
+
+}
+
+</script>
+
 </body>
 </html>
