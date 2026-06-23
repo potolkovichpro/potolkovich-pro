@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Потолкович-Про | Натяжные потолки в Вологде</title>
-
-<meta name="description" content="Натяжные потолки в Вологде. Бесплатный замер. Гарантия 15 лет. Монтаж за 1 день.">
 
 <link rel="icon" type="image/png" href="favicon.png">
 
@@ -26,93 +23,111 @@ scroll-behavior:smooth;
 
 body{
 background:#f5f7fb;
-color:#333;
-line-height:1.6;
+color:#222;
 overflow-x:hidden;
 }
 
-/* =========================
-ШАПКА
-========================= */
+a{
+text-decoration:none;
+}
 
 header{
 position:relative;
-height:100vh;
-min-height:750px;
+min-height:100vh;
 
 background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.70)),
 url("hero.png");
 
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 
-color:white;
 display:flex;
 justify-content:center;
 align-items:center;
+
+padding:40px 20px;
+
+color:white;
 text-align:center;
 }
 
 .topbar{
-
 position:absolute;
-top:20px;
+top:25px;
 left:0;
 right:0;
 
 display:flex;
 justify-content:space-between;
-align-items:center;
+align-items:flex-start;
 
-padding:0 50px;
+padding:0 60px;
+
 z-index:100;
 }
 
+.logo-block{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+}
+
 .logo{
-height:120px;
-width:auto;
+width:180px;
+height:auto;
+filter:drop-shadow(0 0 20px rgba(15,98,254,.35));
 }
 
 .contacts{
 display:flex;
-gap:25px;
 align-items:center;
+gap:28px;
+
+font-size:18px;
+font-weight:700;
 }
 
 .contacts a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-font-size:17px;
-
 display:flex;
 align-items:center;
 gap:8px;
+color:white;
+transition:.3s;
+}
+
+.contacts a:hover{
+opacity:.85;
 }
 
 .contacts img{
-width:22px;
-height:22px;
+width:24px;
+height:24px;
 }
 
 .hero-content{
-max-width:1000px;
-padding:20px;
+max-width:1100px;
+position:relative;
+z-index:10;
 }
 
 .hero-content h1{
-font-size:72px;
-font-weight:800;
-margin-bottom:20px;
-text-shadow:0 5px 25px rgba(0,0,0,.5);
+font-size:82px;
+font-weight:900;
+line-height:1.1;
+margin-bottom:25px;
+
+text-shadow:
+0 5px 25px rgba(0,0,0,.6);
 }
 
 .hero-content p{
-font-size:28px;
+font-size:32px;
+line-height:1.6;
 margin-bottom:40px;
-text-shadow:0 5px 25px rgba(0,0,0,.5);
+text-shadow:
+0 4px 20px rgba(0,0,0,.7);
 }
 
 .buttons{
@@ -120,15 +135,21 @@ display:flex;
 justify-content:center;
 gap:20px;
 flex-wrap:wrap;
+margin-bottom:45px;
 }
 
 .btn{
-display:inline-block;
-padding:18px 36px;
-border-radius:50px;
-font-size:18px;
-font-weight:bold;
-text-decoration:none;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:20px 42px;
+
+border-radius:60px;
+
+font-size:20px;
+font-weight:700;
+
 transition:.3s;
 }
 
@@ -139,7 +160,7 @@ color:white;
 
 .btn-primary:hover{
 background:#004fd6;
-transform:translateY(-3px);
+transform:translateY(-2px);
 }
 
 .btn-secondary{
@@ -148,59 +169,55 @@ color:#0f62fe;
 }
 
 .btn-secondary:hover{
-transform:translateY(-3px);
+transform:translateY(-2px);
 }
 
 .hero-features{
-margin-top:45px;
-
 display:flex;
 justify-content:center;
-gap:35px;
+gap:18px;
 flex-wrap:wrap;
-
-font-size:18px;
-font-weight:bold;
 }
 
 .hero-features span{
 background:rgba(255,255,255,.12);
-padding:10px 18px;
-border-radius:30px;
-backdrop-filter:blur(5px);
-}
+backdrop-filter:blur(10px);
 
-/* =========================
-ОБЩИЕ БЛОКИ
-========================= */
+padding:14px 24px;
+
+border-radius:40px;
+
+font-size:18px;
+font-weight:700;
+}
 
 section{
 padding:90px 20px;
-}
-
-.container{
 max-width:1200px;
 margin:auto;
 }
 
 .section-title{
 text-align:center;
-font-size:42px;
-margin-bottom:50px;
-color:#111;
+font-size:48px;
+font-weight:800;
+margin-bottom:55px;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
 .card{
 background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+padding:35px;
+border-radius:24px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.06);
+
 transition:.3s;
 }
 
@@ -209,46 +226,87 @@ transform:translateY(-5px);
 }
 
 .card h3{
-color:#0f62fe;
+font-size:24px;
 margin-bottom:15px;
+color:#0f62fe;
 }
 
-/* =========================
-МОБИЛЬНАЯ ВЕРСИЯ
-========================= */
+.card p{
+font-size:17px;
+line-height:1.7;
+}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
 
 @media(max-width:768px){
 
 .topbar{
+position:absolute;
+top:15px;
+
+padding:0 12px;
+
 flex-direction:column;
+align-items:center;
 gap:15px;
-padding:20px;
 }
 
 .logo{
-height:80px;
+width:120px;
 }
 
 .contacts{
+display:flex;
 flex-wrap:wrap;
 justify-content:center;
-font-size:14px;
+
+gap:12px;
+
+font-size:13px;
+}
+
+.contacts a{
+gap:5px;
+}
+
+.contacts img{
+width:18px;
+height:18px;
+}
+
+.hero-content{
+margin-top:120px;
 }
 
 .hero-content h1{
-font-size:40px;
+font-size:52px;
+line-height:1.1;
+margin-bottom:20px;
 }
 
 .hero-content p{
-font-size:20px;
+font-size:22px;
+line-height:1.5;
+margin-bottom:30px;
+}
+
+.btn{
+width:100%;
+max-width:320px;
+font-size:18px;
 }
 
 .hero-features{
-font-size:14px;
+gap:12px;
 }
 
-header{
-min-height:700px;
+.hero-features span{
+font-size:15px;
+padding:12px 18px;
+}
+
+.section-title{
+font-size:34px;
 }
 
 }
@@ -262,7 +320,9 @@ min-height:700px;
 
 <div class="topbar">
 
+<div class="logo-block">
 <img src="logo.png" class="logo" alt="Потолкович-Про">
+</div>
 
 <div class="contacts">
 
@@ -270,18 +330,18 @@ min-height:700px;
 📞 +7 (964) 671-30-82
 </a>
 
-<a href="https://t.me/potolkovich_pro" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="22">
-Telegram
-</a>
-
-<a href="https://vk.com/public171564683" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" width="22">
+<a href="https://vk.com/club171564683" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/145/145813.png">
 ВКонтакте
 </a>
 
+<a href="https://t.me/potolkovich_pro" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+Telegram
+</a>
+
 <a href="https://instagram.com/" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="22">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
 Instagram
 </a>
 
@@ -324,11 +384,7 @@ Instagram
 </div>
 
 </header>
-<!-- НАШИ УСЛУГИ -->
-
 <section>
-
-<div class="container">
 
 <h2 class="section-title">
 Наши услуги
@@ -338,60 +394,65 @@ Instagram
 
 <div class="card">
 <h3>Матовые потолки</h3>
-<p>Классическое решение для квартиры, дома или офиса.</p>
+<p>
+Классический вариант без бликов и отражений. Подходит для любых помещений.
+</p>
 </div>
 
 <div class="card">
 <h3>Глянцевые потолки</h3>
-<p>Визуально увеличивают пространство и отражают свет.</p>
+<p>
+Зеркальный эффект визуально увеличивает пространство и высоту помещения.
+</p>
 </div>
 
 <div class="card">
 <h3>Тканевые потолки</h3>
-<p>Премиальное решение без нагрева помещения.</p>
-</div>
-
-<div class="card">
-<h3>Двухуровневые потолки</h3>
-<p>Современный дизайн и зонирование пространства.</p>
+<p>
+Экологичные, прочные и устойчивые к перепадам температуры.
+</p>
 </div>
 
 <div class="card">
 <h3>Сатиновые потолки</h3>
-<p>Элегантная фактура с мягким отражением света.</p>
+<p>
+Идеальный баланс между матовой и глянцевой фактурой.
+</p>
 </div>
 
 <div class="card">
-<h3>Перфорированные потолки</h3>
-<p>Необычные дизайнерские решения для интерьера.</p>
+<h3>Световые линии</h3>
+<p>
+Современное дизайнерское освещение для стильных интерьеров.
+</p>
 </div>
 
 <div class="card">
-<h3>Полупрозрачные потолки</h3>
-<p>Эффект светящегося потолка по всей площади.</p>
+<h3>Теневой профиль</h3>
+<p>
+Премиальное решение с эффектом парящего потолка без вставок.
+</p>
 </div>
 
 <div class="card">
-<h3>Текстурные потолки</h3>
-<p>Имитация натуральных материалов и эксклюзивных покрытий.</p>
+<h3>Парящие потолки</h3>
+<p>
+Создают эффект легкости и визуального увеличения пространства.
+</p>
 </div>
 
 <div class="card">
-<h3>Комбинированные потолки</h3>
-<p>Сочетание нескольких фактур и цветов.</p>
-</div>
-
+<h3>Потолки с подсветкой</h3>
+<p>
+Дополнительное освещение и эффектный внешний вид помещения.
+</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- ПРЕИМУЩЕСТВА -->
-
-<section style="background:#f0f4ff;">
-
-<div class="container">
+<section>
 
 <h2 class="section-title">
 Почему выбирают нас
@@ -401,35 +462,37 @@ Instagram
 
 <div class="card">
 <h3>🛡 Гарантия 15 лет</h3>
-<p>Используем проверенные материалы и комплектующие.</p>
+<p>
+Используем качественные материалы и официальную гарантию на работы.
+</p>
 </div>
 
 <div class="card">
 <h3>📏 Бесплатный замер</h3>
-<p>Выезжаем по Вологде и области без оплаты.</p>
+<p>
+Выезд специалиста по Вологде и области без дополнительной оплаты.
+</p>
 </div>
 
 <div class="card">
 <h3>⚡ Монтаж за 1 день</h3>
-<p>Большинство объектов сдаём в день установки.</p>
+<p>
+Большинство объектов устанавливаем в течение одного рабочего дня.
+</p>
 </div>
 
 <div class="card">
 <h3>✨ Без пыли и мусора</h3>
-<p>Работаем профессиональным инструментом с пылеудалением.</p>
-</div>
-
+<p>
+Используем профессиональный инструмент с пылеудалением.
+</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- КАК МЫ РАБОТАЕМ -->
-
 <section>
-
-<div class="container">
 
 <h2 class="section-title">
 Как мы работаем
@@ -439,155 +502,60 @@ Instagram
 
 <div class="card">
 <h3>1. Бесплатный замер</h3>
-<p>Приезжаем на объект, делаем замеры и консультацию.</p>
+<p>
+Выезжаем на объект, выполняем замеры и консультируем по материалам.
+</p>
 </div>
 
 <div class="card">
-<h3>2. Закупка материала</h3>
-<p>Подготавливаем полотно и комплектующие под ваш проект.</p>
+<h3>2. Закупка материалов</h3>
+<p>
+Изготавливаем полотно по вашим размерам и подготавливаем комплектующие.
+</p>
 </div>
 
 <div class="card">
-<h3>3. Монтаж 1-2 дня</h3>
-<p>Быстрая и аккуратная установка с гарантией качества.</p>
-</div>
-
+<h3>3. Монтаж</h3>
+<p>
+Устанавливаем потолок за 1 день и сдаем полностью готовый объект.
+</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- ГАЛЕРЕЯ -->
-
-<section style="background:#f8f9fb;">
-
-<div class="container">
+<section>
 
 <h2 class="section-title">
 Наши работы
 </h2>
 
-<div class="gallery">
-
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="">
-
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200" alt="">
-
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="">
-
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="">
-
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200" alt="">
-
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200" alt="">
-
-</div>
-
-</div>
-
-</section>
-<!-- FAQ -->
-
-<section>
-
-<div class="container">
-
-<h2 class="section-title">
-Вопросы и ответы
-</h2>
-
 <div class="cards">
 
 <div class="card">
-<h3>Как выбрать фактуру натяжного потолка?</h3>
-<p>
-Матовые потолки выглядят как классический окрашенный потолок.
-Сатиновые имеют мягкий благородный блеск.
-Глянцевые отражают свет и визуально увеличивают помещение.
-</p>
+<img src="hero.png" style="width:100%;border-radius:15px;margin-bottom:15px;">
+<h3>Современная гостиная</h3>
 </div>
 
 <div class="card">
-<h3>Когда устанавливать потолок?</h3>
-<p>
-Мы рекомендуем выполнять монтаж после поклейки обоев и завершения отделочных работ,
-но до установки мебели.
-</p>
+<img src="hero.png" style="width:100%;border-radius:15px;margin-bottom:15px;">
+<h3>Потолок со световыми линиями</h3>
 </div>
 
 <div class="card">
-<h3>Какой профиль используется?</h3>
-<p>
-Мы используем надежный алюминиевый профиль и гарпунную систему монтажа,
-которая обеспечивает долговечность и возможность демонтажа без повреждения полотна.
-</p>
-</div>
-
-<div class="card">
-<h3>Что делать при затоплении?</h3>
-<p>
-Натяжной потолок способен удерживать большое количество воды.
-Наши специалисты аккуратно сольют воду и восстановят первоначальный вид потолка.
-</p>
-</div>
-
-<div class="card">
-<h3>Нужно ли готовить помещение?</h3>
-<p>
-Обычно достаточно обеспечить доступ к стенам по периметру помещения.
-Мы используем инструмент с пылеудалением и работаем максимально аккуратно.
-</p>
-</div>
-
-<div class="card">
-<h3>Можно ли устанавливать на гипсокартон?</h3>
-<p>
-Да. Наши монтажники имеют большой опыт установки натяжных потолков на стены из гипсокартона.
-</p>
-</div>
-
-<div class="card">
-<h3>Сколько времени занимает монтаж?</h3>
-<p>
-Комната площадью около 20 м² обычно устанавливается за 2–3 часа.
-Квартира без сложных конструкций — за один день.
-</p>
-</div>
-
-<div class="card">
-<h3>На сколько опускается потолок?</h3>
-<p>
-Минимальное опускание составляет около 3 см.
-При установке встроенных светильников обычно требуется 6–7 см.
-</p>
-</div>
-
-<div class="card">
-<h3>Есть ли запах после монтажа?</h3>
-<p>
-Качественные полотна имеют минимальный запах, который полностью исчезает через несколько часов.
-</p>
-</div>
-
-<div class="card">
-<h3>Можно ли устанавливать в неотапливаемом помещении?</h3>
-<p>
-Да. Для холодных помещений рекомендуем тканевые потолки, которые не боятся низких температур.
-</p>
-</div>
-
+<img src="hero.png" style="width:100%;border-radius:15px;margin-bottom:15px;">
+<h3>Теневой профиль</h3>
 </div>
 
 </div>
 
 </section>
-
-<!-- КОНТАКТЫ -->
-
 <section id="contact">
 
-<div class="container">
+<h2 class="section-title">
+Контакты
+</h2>
 
 <div class="contact">
 
@@ -603,12 +571,18 @@ Instagram
 Работаем ежедневно по Вологде и Вологодской области
 </p>
 
-<div style="margin-top:30px;">
+<div style="
+margin-top:35px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+">
 
 <a
 href="tel:+79646713082"
 class="btn btn-secondary"
-style="margin:10px;">
+>
 Позвонить
 </a>
 
@@ -616,11 +590,25 @@ style="margin:10px;">
 href="https://t.me/potolkovich_pro"
 target="_blank"
 class="btn btn-secondary"
-style="margin:10px;">
-Написать в Telegram
+>
+Telegram
 </a>
 
-</div>
+<a
+href="https://vk.com/club171564683"
+target="_blank"
+class="btn btn-secondary"
+>
+ВКонтакте
+</a>
+
+<a
+href="https://instagram.com/"
+target="_blank"
+class="btn btn-secondary"
+>
+Instagram
+</a>
 
 </div>
 
